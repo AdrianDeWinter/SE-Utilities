@@ -1,3 +1,5 @@
 *.zip
-SteerAntennaDish
-PowerOverview
+*.bak
+/.vs
+/bin
+/obj
