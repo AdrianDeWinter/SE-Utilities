@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BlockUtilities", "BlockUtilities\BlockUtilities.shproj", "{6AB1BC3A-7B53-4A99-A642-6C643AE5A47D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PrintUtilities", "PrintUtilities\PrintUtilities.shproj", "{AA00A4B7-E585-4422-8970-2259620835BF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "StringUtilities", "StringUtilities\StringUtilities.shproj", "{D8C9715D-0063-4ADB-86B0-475AF9B39192}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MathsUtilities", "MathsUtilities\MathsUtilities.shproj", "{09BE79A7-A3A1-474A-AEC5-48237B349C80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7B971526-CA3F-43E2-B04E-7A626311F116}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PID Controllers", "PID Controllers\PID Controllers.shproj", "{6679A47E-8296-432B-B6BF-71F92DF5AB0B}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MathsUtilities\MathsUtilities.projitems*{09be79a7-a3a1-474a-aec5-48237b349c80}*SharedItemsImports = 13
+		PID Controllers\PID_Controllers.projitems*{6679a47e-8296-432b-b6bf-71f92df5ab0b}*SharedItemsImports = 13
+		BlockUtilities\BlockUtilities.projitems*{6ab1bc3a-7b53-4a99-a642-6c643ae5a47d}*SharedItemsImports = 13
+		PrintUtilities\PrintUtilities.projitems*{aa00a4b7-e585-4422-8970-2259620835bf}*SharedItemsImports = 13
+		StringUtilities\StringUtilities.projitems*{d8c9715d-0063-4adb-86b0-475af9b39192}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B723228C-C79F-4212-974E-1ABC0A926E84}
+	EndGlobalSection
+EndGlobal

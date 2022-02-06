@@ -1,3 +1,3 @@
 # SE-Utilities
 
-A number of utilities, libraries and a custom framework for SpaceEngineers in-game scripts
+A number of utilities and libraries for SpaceEngineers in-game scripts
