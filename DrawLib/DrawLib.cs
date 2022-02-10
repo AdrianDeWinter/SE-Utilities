@@ -21,31 +21,7 @@ using VRageMath;
 namespace IngameScript
 {
     partial class Program
-    {
-        /*
-         * Plans:
-         * Default sprites:
-         * contained in some sort of data structure or namespace
-         * 
-         * simplified drawing calls:
-         * only block reference and surface id as parameters
-         * optional: add knowledge of surface id's on blocks into script
-         * 
-         * Easily store sprite config (e.g. menus):
-         * save/load sprite configs from text structure
-         * easy function to draw on all blocks based on their config
-         * 
-         * Menus:
-         * sets of sprites that auto display values
-         * maybe via format strings and dict references    ?
-         * 
-         * 
-         * 
-         */
+    {   
         
-        public class DrawLib
-        {
-
-        }
     }
 }
