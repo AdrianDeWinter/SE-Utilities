@@ -20,8 +20,41 @@ using VRageMath;
 
 namespace IngameScript
 {
-    partial class Program
-    {   
-        
-    }
+	class texture
+	{
+		private List<MySprite> sprites;
+
+		public string Name;
+
+		public Vector2 Position;//position of the texture, applied as an offset to all sprites in the texture
+
+		public float RotationOrScale;//rotaion in radian
+
+		public Vector2 Scale;//scaleing factor in the x and y axes, 1.0 means origianl scale
+
+		texture(string _name = "texture", List<MySprite> _sprites = null, _rotation = 0f, _position = new Vector2(0,0), _scale = new Vector2(1,1))
+		{
+			if _sprites == null
+				sprites = new List<MySprite>();
+			else
+				sprites = _sprites;
+
+			Name = _name;
+
+			Position = _position;
+
+			Rotation = _rotation;
+
+			Scale = _scale;	
+		}
+
+		void addToFrame(MySpriteDrawFrame frame)
+		{
+			foreach (MySprite sp in sprites){
+				MySprite sprite = sp;
+
+				sprite.Position = sprite.Position * 
+            }
+		}
+	} 
 }

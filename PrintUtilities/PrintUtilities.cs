@@ -51,11 +51,41 @@ namespace IngameScript
             return Math.Round(angle/Math.PI*180, decimalPlaces) + "°";
         }
 
+        public static string FormatVector(Vector3 vector)
+        {
+            int decimalPlaces = 1;
+
+            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces) + " Z:" + Math.Round(vector.Z, decimalPlaces);
+        }
+        public static string FormatVector(Vector3B vector)
+        {
+            int decimalPlaces = 1;
+
+            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces) + " Z:" + Math.Round(vector.Z, decimalPlaces);
+        }
         public static string FormatVector(Vector3D vector)
         {
             int decimalPlaces = 1;
 
             return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces) + " Z:" + Math.Round(vector.Z, decimalPlaces);
+        }
+        public static string FormatVector(Vector2 vector)
+        {
+            int decimalPlaces = 1;
+
+            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces);
+        }
+        public static string FormatVector(Vector2B vector)
+        {
+            int decimalPlaces = 1;
+
+            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces);
+        }
+        public static string FormatVector(Vector2D vector)
+        {
+            int decimalPlaces = 1;
+
+            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces);
         }
     }
 }
