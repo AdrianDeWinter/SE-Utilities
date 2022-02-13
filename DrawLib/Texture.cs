@@ -29,12 +29,12 @@ namespace IngameScript
 		public class Texture
 		{
 			/// <summary>
-			/// the private sprites member containes the sprites that have been added to the Texture
+			/// The private sprites member containes the sprites that have been added to the Texture
 			/// </summary>
-			private List<MySprite> sprites;
+			private readonly List<MySprite> sprites;
 
 			/// <summary>
-			/// A publicly visible name, mostly useful for debug outputs. Default textures will have this set, ist is howerver not required
+			/// A publicly visible name, mostly useful for debug outputs. Default textures will have this set, it is, however, not required
 			/// </summary>
 			public string Name;
 
