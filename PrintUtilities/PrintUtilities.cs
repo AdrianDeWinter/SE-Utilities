@@ -59,9 +59,7 @@ namespace IngameScript
         }
         public static string FormatVector(Vector3B vector)
         {
-            int decimalPlaces = 1;
-
-            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces) + " Z:" + Math.Round(vector.Z, decimalPlaces);
+            return "X:" + ((char)vector.X).ToString() + " Y:" + ((char)vector.Y).ToString() + " Z:" + ((char)vector.Z).ToString();
         }
         public static string FormatVector(Vector3D vector)
         {
@@ -70,12 +68,6 @@ namespace IngameScript
             return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces) + " Z:" + Math.Round(vector.Z, decimalPlaces);
         }
         public static string FormatVector(Vector2 vector)
-        {
-            int decimalPlaces = 1;
-
-            return "X:" + Math.Round(vector.X, decimalPlaces) + " Y:" + Math.Round(vector.Y, decimalPlaces);
-        }
-        public static string FormatVector(Vector2B vector)
         {
             int decimalPlaces = 1;
 
