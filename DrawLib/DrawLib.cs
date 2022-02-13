@@ -20,7 +20,8 @@ using VRageMath;
 
 namespace IngameScript
 {
-	partial class Program : MyGridProgram {
+	partial class Program
+	{
 		/// <summary>
 		/// Sets up the given suface for drawing and returns a draw frame
 		/// A: Sets the background color to SE blue

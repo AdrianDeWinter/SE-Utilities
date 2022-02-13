@@ -52,7 +52,7 @@ namespace IngameScript
 							Size = new Vector2(15f, 15f),
 							Color = new Color(255, 255, 255, 255),
 							RotationOrScale = 0f
-						}, // Eye
+						}, // Left Eye
 						new MySprite()
 						{
 							Type = SpriteType.TEXTURE,
@@ -62,7 +62,7 @@ namespace IngameScript
 							Size = new Vector2(15f, 15f),
 							Color = new Color(255, 255, 255, 255),
 							RotationOrScale = 0f
-						}, // Eye
+						}, // Right Eye
 						new MySprite()
 						{
 							Type = SpriteType.TEXTURE,
@@ -74,18 +74,89 @@ namespace IngameScript
 							RotationOrScale = 3.1416f
 						} // Mouth
 					});
-			public static Texture NoEntry = new Texture("No Entry", new List<MySprite>{
-						new MySprite()
-						{
-							Type = SpriteType.TEXTURE,
-							Alignment = TextAlignment.CENTER,
-							Data = "No Entry",
-							Position = new Vector2(0f, 0f),
-							Size = new Vector2(100f, 100f),
-							Color = new Color(255, 255, 0, 255),
-							RotationOrScale = 0f
-						}
-					});
+
+			public static Texture A = new Texture("A", new List<MySprite>{
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SquareSimple",
+						Position = new Vector2(100f, 0f),
+						Size = new Vector2(30f, 200f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = -0.192f
+					}, // Right Leg
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SquareSimple",
+						Position = new Vector2(-100f, 0f),
+						Size = new Vector2(30f, 200f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0.192f
+					}, // Left Leg
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SquareSimple",
+						Position = new Vector2(0f, -100f),
+						Size = new Vector2(140f, 30f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0f
+					}, // Top Bar
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SquareSimple",
+						Position = new Vector2(0f, -5f),
+						Size = new Vector2(200f, 30f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0f
+					}, // Middle Bar
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "Circle",
+						Position = new Vector2(119f, 98f),
+						Size = new Vector2(30f, 30f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0f
+					}, // Bottom Right Corner
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "Circle",
+						Position = new Vector2(-119f, 98f),
+						Size = new Vector2(30f, 30f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0f
+					}, // Bottom Left Corner
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SemiCircle",
+						Position = new Vector2(-75f, -93f),
+						Size = new Vector2(45f, 45f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = -0.384f
+					}, // Top Left Corner
+					new MySprite()
+					{
+						Type = SpriteType.TEXTURE,
+						Alignment = TextAlignment.CENTER,
+						Data = "SemiCircle",
+						Position = new Vector2(74f, -93f),
+						Size = new Vector2(45f, 45f),
+						Color = new Color(0, 0, 0, 255),
+						RotationOrScale = 0.384f
+					} // Top Right Corner
+			});
 		}
 	}
 }
