@@ -20,104 +20,28 @@ using VRageMath;
 
 namespace IngameScript
 {
-	public class Texture
+	partial class Program
 	{
-		private List<MySprite> sprites;
-
-		public string Name;
-
-		public Vector2 Position;//position of the texture, applied as an offset to all sprites in the texture
-
-		public float RotationOrScale;//rotation in radian
-
-		public Vector2 Scale;//scaling factor in the x and y axes, 1.0 means origianl scale
-
-		public Texture(string _name = "texture", List<MySprite> _sprites = null, float _rotation = 0f)
+		/// <summary>
+		/// Sets up the given suface for drawing and returns a draw frame
+		/// A: Sets the background color to SE blue
+		/// B: switches the content to script
+		/// C: unsets any previously selected script
+		/// </summary>
+		/// <param name="surface">The <see cref="Sandbox.ModAPI.Ingame.IMyTextSurface"/> to prepare for drawing</param>
+		/// <returns>A frame for drawing on the given surface</returns>
+		public static MySpriteDrawFrame PrepareDrawSurface(IMyTextSurface surface)
 		{
-			if (_sprites == null)
-				sprites = new List<MySprite>();
-			else
-				sprites = _sprites;
+			// Draw background color
+			surface.ScriptBackgroundColor = new Color(0, 128, 255, 255);
 
-			Name = _name;
+			// Set content type
+			surface.ContentType = ContentType.SCRIPT;
 
-			RotationOrScale = _rotation;
+			// Set script to none
+			surface.Script = "";
 
-            Position = new Vector2(0f, 0f);
-
-            Scale = new Vector2(1f, 1f);
-		}
-
-		public void AddToFrame(ref MySpriteDrawFrame Frame)
-		{
-			foreach (MySprite sp in sprites)
-			{
-				MySprite sprite = sp;
-
-				sprite.Position *= Scale;
-				sprite.Position += Position;
-
-				sprite.Size *= Scale;
-
-				sprite.RotationOrScale = RotationOrScale;
-
-				Frame.Add(sprite);
-			}
-		}
-
-		public override string ToString()
-		{
-			return "Name: " + Name
-				+ "\nRotation/Scale: " + RotationOrScale
-				+ "\nSprite count: " + sprites.Count
-				+ "\nPosition: " + FormatVector(Position)
-				+ "\nScale: " + FormatVector(Scale);
+			return surface.DrawFrame();
 		}
 	}
-
-	public static struct DefaultTextures
-    {
-		public Texture Smiley = new Texture("Smiley", new List<MySprite>{
-                    new MySprite()
-                    {
-                        Type = SpriteType.TEXTURE,
-                        Alignment = TextAlignment.CENTER,
-                        Data = "Circle",
-                        Position = new Vector2(0f, 0f),
-                        Size = new Vector2(100f, 100f),
-                        Color = new Color(255, 255, 0, 255),
-                        RotationOrScale = 0f
-                    }, // Face
-                    new MySprite()
-                    {
-                        Type = SpriteType.TEXTURE,
-                        Alignment = TextAlignment.CENTER,
-                        Data = "Circle",
-                        Position = new Vector2(-20f, -20f),
-                        Size = new Vector2(15f, 15f),
-                        Color = new Color(255, 255, 255, 255),
-                        RotationOrScale = 0f
-                    }, // Eye
-                    new MySprite()
-                    {
-                        Type = SpriteType.TEXTURE,
-                        Alignment = TextAlignment.CENTER,
-                        Data = "Circle",
-                        Position = new Vector2(20f, -20f),
-                        Size = new Vector2(15f, 15f),
-                        Color = new Color(255, 255, 255, 255),
-                        RotationOrScale = 0f
-                    }, // Eye
-                    new MySprite()
-                    {
-                        Type = SpriteType.TEXTURE,
-                        Alignment = TextAlignment.CENTER,
-                        Data = "SemiCircle",
-                        Position = new Vector2(0f, 0f),
-                        Size = new Vector2(80f, 80f),
-                        Color = new Color(255, 255, 255, 255),
-                        RotationOrScale = 3.1416f
-                    } // Mouth
-                })
-    }
 }
