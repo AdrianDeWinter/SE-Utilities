@@ -17,7 +17,7 @@ using VRageMath;
 
 namespace IngameScript
 {
-    partial class Program
+    partial class Program : MyGridProgram
     {
         public static string StringifyPowerBlock(IMyPowerProducer block)
         {

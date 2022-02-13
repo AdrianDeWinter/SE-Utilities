@@ -9,6 +9,8 @@
     <Import_RootNamespace>IngameScript</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Texture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DefaultTextures.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PrintUtilities.cs" />
   </ItemGroup>
 </Project>
