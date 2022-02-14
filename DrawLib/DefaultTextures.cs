@@ -74,7 +74,9 @@ namespace IngameScript
 							RotationOrScale = 3.1416f
 						} // Mouth
 					});
-
+			/// <summary>
+			/// Letter 'A' in SE's font
+			/// </summary>
 			public static Texture A = new Texture("A", new List<MySprite>{
 					new MySprite()
 					{
@@ -156,6 +158,22 @@ namespace IngameScript
 						Color = new Color(0, 0, 0, 255),
 						RotationOrScale = 0.384f
 					} // Top Right Corner
+			});
+			/// <summary>
+			/// Letter 'B' in SE's font
+			/// </summary>
+			public static Texture B = new Texture("B", new List<MySprite>{
+						new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-95f,0f), new Vector2(35f,170f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Left Bar
+						new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,75f), new Vector2(200f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Bottom Bar
+						new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,0f), new Vector2(200f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Middle Bar
+						new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,-75f), new Vector2(200f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Top Bar
+						new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-102f,82f), new Vector2(20f,20f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Corner Bottom Left
+						new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-102f,-82f), new Vector2(20f,20f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f), // Corner Top Left
+						new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(99f,37f), new Vector2(110f,90f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f), // Bottom Circle
+						new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(99f,-37f), new Vector2(110f,90f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f), // Top Circle
+						new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(99f,37f), new Vector2(40f,30f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f), // Bottom Circle Cutout
+						new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(99f,-37f), new Vector2(40f,30f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f) // Top Circle Cutout
+
 			});
 		}
 	}
