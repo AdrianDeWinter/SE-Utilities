@@ -59,12 +59,24 @@ namespace IngameScript
 			public Vector2 Scale;
 
 			/// <summary>
+			/// The actual width of the Texture in pixels (including scaling)
+			/// </summary>
+			public int Width { get { return (int)(width * Scale.X); } set { Scale.X = width / Width; } }
+			private int width;
+
+			/// <summary>
+			/// The actual height of the Texture in pixels (including scaling)
+			/// </summary>
+			public int Height { get { return (int)(height * Scale.Y); } set { Scale.Y = height / Height; } }
+			private int height;
+
+			/// <summary>
 			/// This constructor takes between zero and three arguments and initializes a new texture.
 			/// </summary>
 			/// <param name="_name">Sets the display name. If not specified, "texture" will be used as default</param>
 			/// <param name="_sprites">A list of sprites, if nothing or null is passed, a new empty List is initialized instead</param>
 			/// <param name="_rotation">A default Value for RotationOrScale. Keep in mind that Text sprites can not be Rotated, and will be scaled instead</param>
-			public Texture(string _name = "texture", List<MySprite> _sprites = null, float _rotation = 0f)
+			public Texture(string _name = "texture", List<MySprite> _sprites = null, float _rotation = 0f, int _width = 0, int _height = 0)
 			{
 				if (_sprites == null)
 					sprites = new List<MySprite>();
@@ -78,6 +90,10 @@ namespace IngameScript
 				Position = new Vector2(0f, 0f);
 
 				Scale = new Vector2(1f, 1f);
+
+				width = _width;
+
+				height = _height;
 			}
 
 			/// <summary>
