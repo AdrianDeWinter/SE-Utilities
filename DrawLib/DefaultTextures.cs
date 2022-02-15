@@ -86,31 +86,32 @@ namespace IngameScript
 			/// <summary>
 			/// Letter 'A' in SE's font
 			/// </summary>
-			public static Texture A = new Texture(_name: "A", _width: 260, _height: 185, _sprites: new List<MyTuple<MySprite, Texture.ColorSlot>>{
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(113f,75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Right Corner
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-113f,75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Left Corner
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-83f,-75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Left Corner
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(83f,-75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Right Corner
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(98f,0f), new Vector2(35f,150f), new Color(0,0,0,255), null, TextAlignment.CENTER, -0.192f),Texture.ColorSlot.Primary), // Right Leg
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-98f,0f), new Vector2(35f,150f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0.192f),Texture.ColorSlot.Primary), // Left Leg
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,-75f), new Vector2(160f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Bar
-				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,-5f), new Vector2(190f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Middle Bar
+			public static Texture A = new Texture(_name: "A", _width: 55, _height: 92.5f, _sprites: new List<MyTuple<MySprite, Texture.ColorSlot>>{
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(22.5f,15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Right Corner
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-22.5f,15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Left Corner
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-16.5f,-15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Left Corner
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(16.5f,-15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Right Corner
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(19.5f,0f), new Vector2(7f,30f), new Color(0,0,0,255), null, TextAlignment.CENTER, -0.192f),Texture.ColorSlot.Primary), // Right Leg
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-19.5f,0f), new Vector2(7f,30f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0.192f),Texture.ColorSlot.Primary), // Left Leg
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,-15f), new Vector2(32f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Bar
+				new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(0f,-1f), new Vector2(38f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Middle Bar
 			},
 			_colors: new Dictionary<string, Color> { { "Primary", new Color(0, 0, 0, 255) } });
+
 			/// <summary>
 			/// Letter 'B' in SE's font
 			/// </summary>
-			public static Texture B = new Texture(_name: "B", _width: 260, _height: 185, _sprites: new List<MyTuple<MySprite, Texture.ColorSlot>>{
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-113f,75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Corner Bottom Left
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-113f,-75f), new Vector2(35f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Corner Top Left
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-113f,0f), new Vector2(35f,150f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Left Bar
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-21f,75f), new Vector2(185f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Bar
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-21f,0f), new Vector2(185f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Middle Bar
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-21f,-75f), new Vector2(185f,35f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Bar
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(71f,35f), new Vector2(115f,115f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Primary), // Bottom Circle
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(71f,-35f), new Vector2(115f,115f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Primary), // Top Circle
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(70f,37f), new Vector2(40f,40f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Background), // Bottom Circle Cutout
-						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(70f,-37f), new Vector2(40f,40f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Background) // Top Circle Cutout
+			public static Texture B = new Texture(_name: "B", _width: 55, _height: 92.5f, _sprites: new List<MyTuple<MySprite, Texture.ColorSlot>>{
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-22.5f,15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Corner Bottom Left
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "Circle", new Vector2(-22.5f,-15f), new Vector2(7f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Corner Top Left
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-22.5f,0f), new Vector2(7f,30f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Left Bar
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-4f,15f), new Vector2(37f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Bottom Bar
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-4f,0f), new Vector2(37f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Middle Bar
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SquareSimple", new Vector2(-4f,-15f), new Vector2(37f,7f), new Color(0,0,0,255), null, TextAlignment.CENTER, 0f),Texture.ColorSlot.Primary), // Top Bar
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(10f,7f), new Vector2(23f,23f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Primary), // Bottom Circle
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(10f,-7f), new Vector2(23f,23f), new Color(0,0,0,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Primary), // Top Circle
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(9f,7.5f), new Vector2(8f,8f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Background), // Bottom Circle Cutout
+						new MyTuple<MySprite, Texture.ColorSlot>(new MySprite(SpriteType.TEXTURE, "SemiCircle", new Vector2(9f,-7.5f), new Vector2(8f,8f), new Color(255,255,255,255), null, TextAlignment.CENTER, 1.5708f),Texture.ColorSlot.Background) // Top Circle Cutout
 			},
 			_colors: new Dictionary<string, Color> { { "Primary", new Color(0, 0, 0, 255) } });
 		}

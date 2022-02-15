@@ -24,17 +24,13 @@ namespace IngameScript
 	{
 		/// <summary>
 		/// Sets up the given suface for drawing and returns a draw frame
-		/// A: Sets the background color to SE blue
-		/// B: switches the content to script
-		/// C: unsets any previously selected script
+		/// A: switches the content to script
+		/// B: unsets any previously selected script
 		/// </summary>
 		/// <param name="surface">The <see cref="Sandbox.ModAPI.Ingame.IMyTextSurface"/> to prepare for drawing</param>
 		/// <returns>A frame for drawing on the given surface</returns>
 		public static MySpriteDrawFrame PrepareDrawSurface(IMyTextSurface surface)
 		{
-			// Draw background color
-			surface.ScriptBackgroundColor = new Color(0, 128, 255, 255);
-
 			// Set content type
 			surface.ContentType = ContentType.SCRIPT;
 
