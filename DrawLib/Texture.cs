@@ -29,9 +29,20 @@ namespace IngameScript
 		public class Texture
 		{
 			/// <summary>
-			/// The private sprites member containes the sprites that have been added to the Texture
+			/// Specifies wich colour slot a given sprite should bind to
 			/// </summary>
-			private readonly List<MySprite> sprites;
+			public enum ColorSlot
+            {
+				None,
+				Background,
+				Primary,
+				Secondary,
+				Tertiary
+            }
+			/// <summary>
+			/// The private sprites member containes the sprites that have been added to the Texture, and their assigned colour slot
+			/// </summary>
+			private readonly List<MyTuple<MySprite, Texture.ColorSlot>> sprites;
 
 			/// <summary>
 			/// A publicly visible name, mostly useful for debug outputs. Default textures will have this set, it is, however, not required
@@ -71,15 +82,35 @@ namespace IngameScript
 			private int height;
 
 			/// <summary>
+			/// The colour that gets assigned to all sprites classed as "background"
+			/// </summary>
+			public Color Background = new Color(255, 255, 255, 255);
+
+			/// <summary>
+			/// The colour that gets assigned to all sprites classed as "primary"
+			/// </summary>
+			public Color Primary = new Color(255, 255, 255, 255);
+			
+			/// <summary>
+			/// The colour that gets assigned to all sprites classed as "secondary"
+			/// </summary>
+			public Color Secondary = new Color(255, 255, 255, 255);
+			
+			/// <summary>
+			/// The colour that gets assigned to all sprites classed as "tertiary"
+			/// </summary>
+			public Color Tertiary = new Color(255, 255, 255, 255);
+
+			/// <summary>
 			/// This constructor takes between zero and three arguments and initializes a new texture.
 			/// </summary>
 			/// <param name="_name">Sets the display name. If not specified, "texture" will be used as default</param>
 			/// <param name="_sprites">A list of sprites, if nothing or null is passed, a new empty List is initialized instead</param>
 			/// <param name="_rotation">A default Value for RotationOrScale. Keep in mind that Text sprites can not be Rotated, and will be scaled instead</param>
-			public Texture(string _name = "texture", List<MySprite> _sprites = null, float _rotation = 0f, int _width = 0, int _height = 0)
+			public Texture(string _name = "texture", List<MyTuple<MySprite,Texture.ColorSlot>> _sprites = null, float _rotation = 0f, int _width = 0, int _height = 0, Dictionary<string,Color> _colors = null)
 			{
 				if (_sprites == null)
-					sprites = new List<MySprite>();
+					sprites = new List<MyTuple<MySprite, Texture.ColorSlot>>();
 				else
 					sprites = _sprites;
 
@@ -94,6 +125,18 @@ namespace IngameScript
 				width = _width;
 
 				height = _height;
+
+				if(_colors != null)
+                {
+					if (_colors.ContainsKey("Background"))
+						Background = _colors.GetValueOrDefault("Background");
+					if (_colors.ContainsKey("Primary"))
+						Primary = _colors.GetValueOrDefault("Primary");
+					if (_colors.ContainsKey("Secondary"))
+						Secondary = _colors.GetValueOrDefault("Secondary");
+					if (_colors.ContainsKey("Tertiary"))
+						Tertiary = _colors.GetValueOrDefault("Tertiary");
+				}
 			}
 
 			/// <summary>
@@ -102,17 +145,32 @@ namespace IngameScript
 			/// <param name="Frame">The frame to add the sprites to</param>
 			public void AddToFrame(ref MySpriteDrawFrame Frame)
 			{
-				foreach (MySprite sp in sprites)
+				foreach (MyTuple<MySprite,Texture.ColorSlot> sp in sprites)
 				{
-					MySprite sprite = sp;
+					//copy the sprite
+					MySprite sprite = sp.Item1;
 
+					//apply position offsets according to texture position adn scale
 					sprite.Position *= Scale;
 					sprite.Position += Position;
 
+					//scale it according to texture scale
 					sprite.Size *= Scale;
 
+					//rotate (or scale for text)
 					sprite.RotationOrScale += RotationOrScale;
 
+					//apply colours
+                    switch (sp.Item2)
+                    {
+						case ColorSlot.None: break;
+						case ColorSlot.Background: sprite.Color = Background; break;
+						case ColorSlot.Primary: sprite.Color = Primary; break;
+						case ColorSlot.Secondary: sprite.Color = Secondary; break;
+						case ColorSlot.Tertiary: sprite.Color = Tertiary; break;
+					}
+
+					//add to the frame to render
 					Frame.Add(sprite);
 				}
 			}
